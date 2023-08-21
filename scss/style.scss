@@ -1,0 +1,383 @@
+@import "fonts";
+@import "reset";
+@import "global";
+
+.emx-hero {
+	background: #0047bb url("../images/hero-bg.jpg") center bottom 30% no-repeat;
+	background-size: cover;
+	display: flex;
+	align-items: flex-end;
+	height: 630px;
+	@media screen and (max-width: 1184px) {
+		height: 460px;
+		background-image: url("../images/hero-bg-1185.jpg");
+		background-position: center left;
+	}
+	@media screen and (max-width: 749px) {
+		background-image: url("../images/hero-bg-690.jpg");
+		background-position: center center;
+	}
+	&__body {
+		max-width: 1184px;
+		width: 100%;
+		margin: 0 auto;
+		@media screen and (max-width: 1184px) {
+			max-width: 750px;
+		}
+		@media screen and (max-width: 749px) {
+			max-width: unset;
+		}
+	}
+	&__inner {
+		height: 100%;
+		padding: 0 5% 60px 0;
+		@media screen and (max-width: 749px) {
+			padding: 0 15% 0 0;
+		}
+	}
+	&__heading{
+		@media screen and (max-width: 749px) {
+			margin: 0 0 20px 16px;
+		}
+	}
+	&__title {
+		font-weight: 700;
+		font-size: 60px;
+		line-height: 68px;
+		color: #fff;
+		text-transform: uppercase;
+		@media screen and (max-width: 1184px) {
+			font-size: 44px;
+			line-height: 50px;
+		}
+		@media screen and (max-width: 749px) {
+			font-size: 22px;
+			line-height: 30px;
+		}
+	}
+	&__subtitle {
+		display: block;
+		font-weight: 400;
+		font-size: 40px;
+		line-height: 52px;
+		text-transform: none;
+		color: #fff;
+		@media screen and (max-width: 1184px) {
+			font-size: 20px;
+			line-height: 22px;
+		}
+		@media screen and (max-width: 749px) {
+			font-size: 14px;
+			line-height: 20px;
+		}
+	}
+}
+
+.emx-about {
+	&__inner {
+		padding: 50px 0 50px;
+		@media screen and (max-width: 749px) {
+			padding: 30px 0 30px;
+		}
+	}
+	&__description {
+		margin-bottom: 10px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__quote{
+		text-align: right;
+	}
+}
+
+.emx-vacations{
+	& .emx-lifehack__title{
+		margin-bottom: 15px;
+		text-align-last: left;
+	}
+	& .emx-lifehack__descr:first-child{
+		margin-bottom: 0;
+		@media screen and (max-width: 749px) {
+			text-align: center;
+			margin-bottom: 15px;
+		}
+	}
+	&__cards {
+		margin-bottom: 30px;
+	}
+}
+
+.emx-places {
+	&__cards {
+		margin-bottom: 30px;
+	}
+	&__lifehack{
+		margin-bottom: 30px;
+	}
+	& .emx-card:last-child{
+		@media screen and (max-width: 749px) {
+			margin-bottom: 0;
+		}
+	}
+	
+}
+
+.emx-needs {
+	& .emx-title{
+		margin-bottom: 36px;
+		@media screen and (max-width: 749px) {
+			margin-bottom: 25px;
+		}
+	}
+	& .emx-content-container > .emx-text{
+		margin-bottom: 20px;
+	}
+}
+
+.emx-banner {
+	padding-bottom: 20px;
+	& .emx-content-container {
+		@media screen and (max-width: 749px) {
+			padding: 0;
+		}
+	}
+	&__inner {
+		background-color: #1946ba;
+		border-radius: 10px;
+		display: flex;
+		justify-content: space-between;
+		@media screen and (max-width: 749px) {
+			flex-direction: column;
+			text-align: left;
+			// align-items: center;
+			justify-content: flex-start;
+			border-radius: 0;
+			padding: 20px;
+		}
+	}
+	&__info {
+		padding: 50px 60px 50px 30px;
+		@media screen and (max-width: 749px) {
+			padding: 0;
+			text-align: center;
+		}
+		&--left{
+			@media screen and (max-width: 749px) {
+				text-align: left;
+			}
+		}
+	}
+	&__item {
+		margin-bottom: 38px;
+		&:last-child {
+			margin-bottom: 0;
+			& .emx-banner__btn {
+				margin-bottom: 8px;
+			}
+		}
+		@media screen and (max-width: 749px) {
+			margin-bottom: 28px;
+		}
+	}
+	&__title {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 31px;
+		color: #fff;
+		margin-bottom: 10px;
+		text-align: left;
+		max-width: 400px;
+		@media screen and (max-width: 749px) {
+			font-size: 20px;
+			line-height: 28px;
+			max-width: unset;
+		}
+	}
+	&__descr{
+		text-align: left;
+		color: #fff;
+		margin-bottom: 20px;
+		& span{
+			font-weight: 700;
+		}
+		&-link{
+			color: inherit;
+			text-decoration: underline;
+		}
+	}
+	&__img {
+		display: none;
+		@media screen and (max-width: 749px) {
+			display: block;
+		}
+		& img {
+			width: 100%;
+		}
+	}
+	&__img-bg {
+		flex: 0 0 50%;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
+		@media screen and (max-width: 1184px) {
+			flex: 0 0 45%;
+		}
+		@media screen and (max-width: 749px) {
+			background: transparent;
+			border-top-right-radius: 0px;
+		border-bottom-right-radius: 0px;
+		}
+		&--position {
+			background: url("../images/banner-bg-1.jpg") center right no-repeat;
+			background-size: cover;
+			@media screen and (max-width: 1184px) {
+				background-position: center right 40%;
+			}
+		}
+		&--position-2{
+			background: url("../images/banner-bg-2.jpg") center left no-repeat;
+			background-size: cover;
+			@media screen and (max-width: 1184px) {
+				background-position: center left 15%;
+			}
+		}
+		&--position-3{
+			background: url("../images/banner-bg-3.jpg") center center no-repeat;
+			background-size: cover;
+			@media screen and (max-width: 1184px) {
+				background-position: center right 70%;
+			}
+		}
+	}
+	&__text {
+		color: #fff;
+		margin-bottom: 20px;
+		font-weight: 300;
+		text-align: left;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__btn {
+		@media screen and (max-width: 749px) {
+			align-self: center;
+		}
+	}
+	&__btn + .emx-banner__descr{
+		margin-top: 20px;
+		margin-bottom: 0;
+		font-size: 14px;
+		line-height: 21px;
+	}
+	&__list{
+		text-align: left;
+		margin-bottom: 20px;
+		color: #fff;
+		
+		@media screen and (max-width: 749px) {
+			max-width: unset;
+		}
+		&-title{
+			font-weight: 700;
+			margin-bottom: 16px;
+		}
+		&-item{
+			margin-bottom: 16px;
+			position: relative;
+			padding-left: 24px;
+			&::before {
+				content: "";
+				width: 8px;
+				height: 8px;
+				background: #fff;
+				border-radius: 50%;
+				position: absolute;
+				left: 0;
+				top: 7px;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+			@media screen and (max-width: 749px) {
+				margin-bottom: 10px;
+			}
+		}
+	}
+	
+}
+
+.emx-bye {
+	&__text {
+		max-width: 985px;
+		padding-bottom: 20px;
+	}
+}
+
+.emx-app-banner {
+	padding-bottom: 50px;
+	@media screen and (max-width: 749px) {
+		padding-bottom: 40px;
+	}
+	&__inner {
+		background: #2A85D9 url('../images/app-banner-bg.jpg') center center no-repeat;
+		background-size: cover;
+		
+	}
+	&__container{
+		max-width: 920px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		@media screen and (max-width: 749px) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+	}
+	&__info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 50px 30px 50px 50px;
+		max-width: 460px;
+		color: #fff;
+		text-align: left;
+		@media screen and (max-width: 749px) {
+			max-width: unset;
+			text-align: center;
+			padding: 15px 10px 20px;
+		}
+		&-title {
+			font-weight: 700;
+			font-size: 22px;
+			line-height: 28px;
+			margin-bottom: 20px;
+		}
+		&-text {
+			margin-bottom: 30px;
+		}
+		&-btns {
+			display: flex;
+			justify-content: space-between;
+			width: 280px;
+			@media screen and (max-width: 749px) {
+				margin: 0 auto;
+			}
+			img {
+				display: block;
+			}
+		}
+	}
+	&__img {
+		display: flex;
+		align-items: flex-end;
+		@media screen and (max-width: 1184px) {
+			padding-right: 50px;
+		}
+		@media screen and (max-width: 749px) {
+			justify-content: center;
+			text-align: center;
+			padding: 0 10px;
+		}
+	}
+}
